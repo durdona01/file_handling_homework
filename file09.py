@@ -6,5 +6,19 @@ def main(data:str):
     Returns:
         int: return answer
     """
+    f = open(data)
+    d = f.read()
+    
+    nums = []
+    for i in d:
+        if i.isdigit():
+            nums += [int(i)]
 
-# Read data from file
+    minNum = nums[0]
+    for num in nums:
+        if num < minNum:
+            minNum = num
+    f.close()
+    return minNum
+
+print(main('./data/data09.txt'))

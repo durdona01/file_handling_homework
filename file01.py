@@ -1,10 +1,7 @@
 def main(data:str):
-    """
-    The data is from the file. Return data as a list type.
-    Args:
-        data: str
-    Returns:
-        list: return answer
-    """
-
-# Read data from file
+    f = open(data)
+    data = f.read()
+    res = data.split(',')
+    f.close()
+    return res
+print(main('./data/data01.txt'))

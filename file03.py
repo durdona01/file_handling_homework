@@ -6,5 +6,13 @@ def main(data:str):
     Returns:
         list: return answer
     """
-
-# Read data from file
+    f = open(data)
+    data = f.read()
+    digits = '0123456789'
+    ans = []
+    for i in data:
+        if i in digits:
+            ans += [int(i)]
+    f.close()
+    return ans
+print(main('./data/data03.txt'))

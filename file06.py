@@ -6,5 +6,11 @@ def main(data:str):
     Returns:
         list: return answer
     """
-    
-# Read data from file
+    f = open(data)
+    d = f.readlines()
+    res = []
+    for i in d:
+        res += [len(i)-1]
+    f.close()
+    return res
+print(main('./data/data06.txt'))
